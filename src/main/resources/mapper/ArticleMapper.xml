@@ -9,4 +9,16 @@
         </if>
     </where>
     </select>
+    <select id="selectArticleById" resultType="Article">
+        select id,
+               title,
+               introduction,
+               content,
+               cid,
+               uid,
+               create_time,
+               update_time
+        from article
+        where id = #{id}
+    </select>
 </mapper>

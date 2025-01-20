@@ -7,4 +7,6 @@ import java.util.List;
 public interface ArticleService {
 
     List<Article> showAllArticleByCategory(Article article);
+
+    Article findArticleById(Integer id);
 }

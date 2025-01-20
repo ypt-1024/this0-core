@@ -8,4 +8,6 @@ import java.util.List;
 @Mapper
 public interface ArticleMapper {
     List<Article> selectAllArticleByCategory(Article article);
+
+    Article selectArticleById(Integer id);
 }
