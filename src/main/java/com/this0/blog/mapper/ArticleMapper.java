@@ -12,4 +12,10 @@ public interface ArticleMapper {
     Article selectArticleById(Integer id);
 
     List<Article> selectAllArticleByUid(Long uid);
+
+    Integer updateArticle(Article article);
+
+    Integer insertArticle(Article article);
+
+    Integer deleteArticleById(Integer id);
 }

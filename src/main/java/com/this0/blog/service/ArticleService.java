@@ -12,4 +12,9 @@ public interface ArticleService {
 
     List<Article> showAllArticleByUid(Long uid);
 
+    Integer changeArticle(Article article);
+
+    Integer addArticle(Article article);
+
+    Integer removeArticleById(Integer id);
 }

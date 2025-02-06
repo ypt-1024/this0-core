@@ -42,4 +42,34 @@ public class ArticleController {
 
     }
 
+    @PutMapping("/")
+    @Operation(summary = "根据文章id修改文章")
+    public Result updateArticleById(@RequestBody Article article) {
+        Integer result = articleService.changeArticle(article);
+        if (result > 0) {
+            return Result.ok();
+        }
+        return Result.fail();
+    }
+
+    @PostMapping("/")
+    @Operation(summary = "新增文章")
+    public Result addArticle(@RequestBody Article article) {
+        Integer rusult = articleService.addArticle(article);
+        if (rusult > 0) {
+            return Result.ok(rusult);
+        }
+        return Result.fail();
+    }
+
+    @DeleteMapping("/{id}")
+    @Operation(summary = "删除文章")
+    public Result removeArticleById(@PathVariable("id") Integer id) {
+        Integer result = articleService.removeArticleById(id);
+        if (result > 0) {
+            return Result.ok();
+        }
+        return Result.fail();
+    }
+
 }
