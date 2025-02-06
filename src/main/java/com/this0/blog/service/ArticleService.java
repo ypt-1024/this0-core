@@ -9,4 +9,7 @@ public interface ArticleService {
     List<Article> showAllArticleByCategory(Article article);
 
     Article findArticleById(Integer id);
+
+    List<Article> showAllArticleByUid(Long uid);
+
 }

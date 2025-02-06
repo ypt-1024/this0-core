@@ -21,4 +21,9 @@
         from article
         where id = #{id}
     </select>
+    <select id="selectAllArticleByUid"  resultType="Article">
+        select id, title, cid, uid, create_time, update_time
+        from article
+        where uid = #{uid}
+    </select>
 </mapper>

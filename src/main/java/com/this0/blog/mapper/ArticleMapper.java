@@ -10,4 +10,6 @@ public interface ArticleMapper {
     List<Article> selectAllArticleByCategory(Article article);
 
     Article selectArticleById(Integer id);
+
+    List<Article> selectAllArticleByUid(Long uid);
 }

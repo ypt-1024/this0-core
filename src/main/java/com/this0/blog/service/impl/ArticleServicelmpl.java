@@ -24,7 +24,12 @@ public class ArticleServicelmpl implements ArticleService {
     @Override
     @Transactional(readOnly = true)
     public Article findArticleById(Integer id) {
-        return  articleMapper.selectArticleById(id);
+        return articleMapper.selectArticleById(id);
+    }
+
+    @Override
+    public List<Article> showAllArticleByUid(Long uid) {
+        return articleMapper.selectAllArticleByUid(uid);
 
     }
 }

@@ -19,6 +19,13 @@ public class ArticleController {
     @Autowired
     private ArticleService articleService;
 
+    @GetMapping("/showAllByUid/{uid}")
+    @Operation(summary = "根据uid查询文章列表")
+    public Result showAllByUid(@PathVariable Long uid) {
+        List<Article> list = articleService.showAllArticleByUid(uid);
+        return Result.ok(list);
+    }
+
     @PostMapping("/showAll")
     @Operation(summary = "根据分类查询文章")
     public Result showAll(@RequestBody Article article) {
