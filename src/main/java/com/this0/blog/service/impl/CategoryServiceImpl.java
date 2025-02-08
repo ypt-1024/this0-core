@@ -22,4 +22,19 @@ public class CategoryServiceImpl implements CategoryService {
         return categoryMapper.selectAllCategory();
     }
 
+    @Override
+    public Integer updataCategory(Category category) {
+        return categoryMapper.updateCategory(category);
+    }
+
+    @Override
+    public Integer addCategory(Category category) {
+        return categoryMapper.insertCategory(category);
+    }
+
+    @Override
+    public Integer deleteCategory(Integer cid) {
+        return categoryMapper.deleteCategory(cid);
+    }
+
 }

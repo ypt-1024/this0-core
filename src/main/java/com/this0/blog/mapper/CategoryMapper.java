@@ -8,4 +8,10 @@ import java.util.List;
 @Mapper
 public interface CategoryMapper {
     List<Category> selectAllCategory();
+
+    Integer updateCategory(Category category);
+
+    Integer insertCategory(Category category);
+
+    Integer deleteCategory(Integer cid);
 }
